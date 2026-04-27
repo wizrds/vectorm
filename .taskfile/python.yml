@@ -1,0 +1,21 @@
+version: '3'
+
+tasks:
+  fmt:
+    cmds:
+      - uvx ruff format {{.SRC_DIR}} {{.CLI_ARGS}}
+
+  lint:
+    cmds:
+      - uvx ruff check {{.SRC_DIR}} {{.CLI_ARGS}}
+
+  test:
+    cmds:
+      - coverage run -m pytest --junitxml=report.xml {{.CLI_ARGS}}
+      - coverage report
+      - coverage xml
+      - coverage html -d coverage-report
+
+  build:
+    cmds:
+      - uv build --wheel

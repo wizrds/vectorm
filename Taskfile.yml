@@ -1,0 +1,11 @@
+version: '3'
+
+silent: true
+
+includes:
+  version:
+    taskfile: .taskfile/version.yml
+  python:
+    taskfile: .taskfile/python.yml
+    vars:
+      PACKAGE_SRC_DIR: vectorm

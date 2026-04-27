@@ -1,0 +1,21 @@
+{
+    "name": "vectorm",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+		"args": {
+			"VARIANT": "3.14-bookworm"
+		}
+    },
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.mypy-type-checker",
+				"charliemarsh.ruff"
+			]
+		}
+	},
+	"postCreateCommand": "prek install --install-hooks && uv sync",
+	"remoteUser": "dev"
+}
