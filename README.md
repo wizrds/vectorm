@@ -1,26 +1,26 @@
 # Vectorm
 
-![Static Badge](https://img.shields.io/badge/python-03.11%20%7C%203.12%20%7C%203.13-blue?style=flat-square)
+![Static Badge](https://img.shields.io/badge/python-03.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue?style=flat-square)
 
-**Vectorm** is a Python ORM-like abstraction layer for vector databases, enabling declarative modeling, querying, filtering, and schema migrations — inspired by popular ORMs but purpose-built for vector stores like Qdrant.
+**Vectorm** is a Python ORM-like abstraction layer for vector databases, enabling declarative modeling, querying, filtering, and schema migrations inspired by popular ORMs but purpose-built for vector stores like Qdrant.
 
 ---
 
 ## Features
 
-- 🚀 Simple `Document` modeling with fields and tensor annotations
-- 🔍 Rich filtering, sorting, and cursor-based pagination
-- 🎯 Supports dense and sparse vector search (depending on backend)
-- 🔄 Declarative migrations system
-- 🧩 Pluggable backend architecture (currently supports Qdrant)
-- 🧪 Typed and fully async, suitable for large-scale pipelines
+- Simple `Document` modeling with fields and tensor annotations
+- Rich filtering, sorting, and cursor-based pagination
+- Supports dense and sparse vector search (depending on backend)
+- Declarative migrations system
+- Pluggable backend architecture (currently supports Qdrant)
+- Typed and fully async, suitable for large-scale pipelines
 
 ---
 
 ## Installation
 
 ```bash
-pip install vectorm
+uv add git+https://github.com/wizrds/vectorm.git
 ```
 
 ## Usage
