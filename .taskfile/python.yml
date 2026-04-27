@@ -19,3 +19,7 @@ tasks:
   build:
     cmds:
       - uv build --wheel
+
+  publish:
+    cmds:
+      - uv publish

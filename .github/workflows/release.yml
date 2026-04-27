@@ -6,7 +6,9 @@ on:
 
 jobs:
   publish-library:
+    # Disable publishing to PyPI for now
     if: |
+      false &&
       !contains(github.event.head_commit.message, '[skip-ci]') &&
       github.repository == 'wizrds/vectorm'
     name: Publish library to pypi
@@ -45,8 +47,7 @@ jobs:
         run: uv run task python:build
 
       - name: Publish to PyPI
-        # run: task python:publish
-        run: echo "Publishing to PyPI"
+        run: task python:publish
         env:
           UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
 
