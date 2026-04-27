@@ -39,7 +39,6 @@ The following example demonstrates defining a document schema, saving documents,
 ```python
 import asyncio
 
-import asyncio
 import numpy as np
 from typing import Annotated, Literal
 
