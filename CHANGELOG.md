@@ -1,6 +1,12 @@
 # Changelog
 
 ---
+## [0.2.0](https://github.com/wizrds/vectorm/compare/0.1.0...0.2.0) - 2026-04-27
+
+### Features
+
+- Make new release - ([24d3828](https://github.com/wizrds/vectorm/commit/24d3828f4d7dec58b99a5eb8ea213dcda05e232e)) - Timothy Pogue
+---
 ## [0.1.0] - 2026-04-27
 
 ### Bug Fixes
