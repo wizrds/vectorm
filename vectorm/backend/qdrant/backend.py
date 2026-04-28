@@ -168,25 +168,16 @@ class QdrantVectorStoreBackend(VectorStoreBackend):
     ) -> Sequence[ScoredDocument[TDocument]]:
         return [
             scored_document_from_scored_point(result, document_type)
-            for result in await self.client.search(
+            for result in (await self.client.query_points(
                 collection_name=collection_name,
-                query_vector=(
-                    models.NamedVector(
-                        name=tensor_field.as_str("."),
-                        vector=normalize_tensor(query_tensor),
-                    )
-                    if issubclass(type(query_tensor), Tensor)
-                    else models.NamedSparseVector(
-                        name=tensor_field.as_str("."),
-                        vector=normalize_tensor(query_tensor),
-                    )
-                ),
+                query=normalize_tensor(query_tensor),
+                using=tensor_field.as_str("."),
                 query_filter=filter.accept(self.expression_visitor) if filter else None,
                 with_payload=True,
                 with_vectors=True,
                 limit=limit,
                 **kwargs,
-            )
+            )).points
         ]
 
     async def find_documents(
