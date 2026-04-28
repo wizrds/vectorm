@@ -1,6 +1,16 @@
 # Changelog
 
 ---
+## [0.2.1](https://github.com/wizrds/vectorm/compare/0.2.0...0.2.1) - 2026-04-28
+
+### Bug Fixes
+
+- Fix vector query in qdrant backend - ([5805249](https://github.com/wizrds/vectorm/commit/580524956bef549027e5e17a19cb858122f07ee5)) - Timothy Pogue
+
+### Miscellaneous
+
+- Fix example in README - ([2d633fc](https://github.com/wizrds/vectorm/commit/2d633fcc274051cd626a58ad2f4a479f71a25c36)) - Timothy Pogue
+---
 ## [0.2.0](https://github.com/wizrds/vectorm/compare/0.1.0...0.2.0) - 2026-04-27
 
 ### Features
